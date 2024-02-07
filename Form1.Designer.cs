@@ -52,7 +52,7 @@
             // lb_vards
             // 
             this.lb_vards.AutoSize = true;
-            this.lb_vards.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_vards.BackColor = System.Drawing.Color.MistyRose;
             this.lb_vards.Location = new System.Drawing.Point(80, 34);
             this.lb_vards.Name = "lb_vards";
             this.lb_vards.Size = new System.Drawing.Size(34, 13);
@@ -62,7 +62,7 @@
             // lb_uzvards
             // 
             this.lb_uzvards.AutoSize = true;
-            this.lb_uzvards.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_uzvards.BackColor = System.Drawing.Color.MistyRose;
             this.lb_uzvards.Location = new System.Drawing.Point(78, 68);
             this.lb_uzvards.Name = "lb_uzvards";
             this.lb_uzvards.Size = new System.Drawing.Size(46, 13);
@@ -72,7 +72,7 @@
             // lb_velt_teksts
             // 
             this.lb_velt_teksts.AutoSize = true;
-            this.lb_velt_teksts.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_velt_teksts.BackColor = System.Drawing.Color.MistyRose;
             this.lb_velt_teksts.Location = new System.Drawing.Point(42, 287);
             this.lb_velt_teksts.Name = "lb_velt_teksts";
             this.lb_velt_teksts.Size = new System.Drawing.Size(81, 13);
@@ -82,7 +82,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.LightYellow;
+            this.label4.BackColor = System.Drawing.Color.RosyBrown;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(104, 141);
             this.label4.Name = "label4";
@@ -93,7 +93,7 @@
             // lb_platums
             // 
             this.lb_platums.AutoSize = true;
-            this.lb_platums.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_platums.BackColor = System.Drawing.Color.MistyRose;
             this.lb_platums.Location = new System.Drawing.Point(79, 176);
             this.lb_platums.Name = "lb_platums";
             this.lb_platums.Size = new System.Drawing.Size(44, 13);
@@ -103,7 +103,7 @@
             // lb_augstums
             // 
             this.lb_augstums.AutoSize = true;
-            this.lb_augstums.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_augstums.BackColor = System.Drawing.Color.MistyRose;
             this.lb_augstums.Location = new System.Drawing.Point(78, 213);
             this.lb_augstums.Name = "lb_augstums";
             this.lb_augstums.Size = new System.Drawing.Size(53, 13);
@@ -113,7 +113,7 @@
             // lb_garums
             // 
             this.lb_garums.AutoSize = true;
-            this.lb_garums.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_garums.BackColor = System.Drawing.Color.MistyRose;
             this.lb_garums.Location = new System.Drawing.Point(80, 251);
             this.lb_garums.Name = "lb_garums";
             this.lb_garums.Size = new System.Drawing.Size(43, 13);
@@ -179,7 +179,7 @@
             // lb_cena
             // 
             this.lb_cena.AutoSize = true;
-            this.lb_cena.BackColor = System.Drawing.Color.LightCoral;
+            this.lb_cena.BackColor = System.Drawing.Color.MistyRose;
             this.lb_cena.Location = new System.Drawing.Point(7, 331);
             this.lb_cena.Name = "lb_cena";
             this.lb_cena.Size = new System.Drawing.Size(114, 13);
@@ -188,9 +188,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(649, 12);
+            this.button1.Location = new System.Drawing.Point(612, 14);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 40);
+            this.button1.Size = new System.Drawing.Size(139, 40);
             this.button1.TabIndex = 15;
             this.button1.Text = "Aprēķināt";
             this.button1.UseVisualStyleBackColor = true;
@@ -198,9 +198,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(595, 299);
+            this.button2.Location = new System.Drawing.Point(567, 361);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(93, 35);
+            this.button2.Size = new System.Drawing.Size(121, 35);
             this.button2.TabIndex = 16;
             this.button2.Text = "Saglabāt failā";
             this.button2.UseVisualStyleBackColor = true;
@@ -209,17 +209,17 @@
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.richTextBox1.Location = new System.Drawing.Point(595, 51);
+            this.richTextBox1.Location = new System.Drawing.Point(567, 51);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(204, 242);
+            this.richTextBox1.Size = new System.Drawing.Size(232, 304);
             this.richTextBox1.TabIndex = 17;
             this.richTextBox1.Text = "";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(694, 299);
+            this.button3.Location = new System.Drawing.Point(679, 361);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 35);
+            this.button3.Size = new System.Drawing.Size(120, 35);
             this.button3.TabIndex = 18;
             this.button3.Text = "Saglabāt datubāzē";
             this.button3.UseVisualStyleBackColor = true;
