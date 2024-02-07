@@ -142,3 +142,6 @@ namespace uldis_ladite
         }
     }
 }
+
+
+//Pamēģināt uztaisīt matemātiku ar komatiem private void button1_Click
