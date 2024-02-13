@@ -140,8 +140,91 @@ namespace uldis_ladite
                    !string.IsNullOrEmpty(tb_augstums.Text) &&
                    !string.IsNullOrEmpty(tb_cena.Text);
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SQLiteConnection sqlite_conn;
+            sqlite_conn = CreateConnection();
+
+            SQLiteCommand sqlite_cmd;
+            sqlite_cmd = sqlite_conn.CreateCommand();
+            sqlite_cmd.CommandText = "SELECT * FROM Uldaizmaksas";
+
+            DataTable sTable;
+            SQLiteDataAdapter sqlda = new SQLiteDataAdapter(sqlite_cmd);
+            using (sTable = new DataTable())
+            {
+                sqlda.Fill(sTable);
+                dataGridView1.DataSource = sTable;
+            }
+
+            /*if (sTable.Rows.Count > 0)
+            {
+                lb_vards.Text = sTable.Rows[0]["Vards"].ToString();
+            }
+            else
+            {
+                lb_uzvards.Text = "Nav atrasts!";
+            }*/
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_garums_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_augstums_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_platums_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_velt_teksts_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_garums_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_augstums_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_platums_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tb_cena_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_velt_teksts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lb_cena_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
 
 //Pamēģināt uztaisīt matemātiku ar komatiem private void button1_Click
+// poga - apskatīt datubāzi, atver jaunu logu ar datubāzes pārskatu
