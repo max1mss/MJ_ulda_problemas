@@ -28,197 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lb_vards = new System.Windows.Forms.Label();
-            this.lb_uzvards = new System.Windows.Forms.Label();
-            this.lb_velt_teksts = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lb_platums = new System.Windows.Forms.Label();
-            this.lb_augstums = new System.Windows.Forms.Label();
-            this.lb_garums = new System.Windows.Forms.Label();
-            this.tb_vards = new System.Windows.Forms.TextBox();
-            this.tb_uzvards = new System.Windows.Forms.TextBox();
-            this.tb_velt_teksts = new System.Windows.Forms.TextBox();
-            this.tb_platums = new System.Windows.Forms.TextBox();
-            this.tb_augstums = new System.Windows.Forms.TextBox();
-            this.tb_garums = new System.Windows.Forms.TextBox();
-            this.tb_cena = new System.Windows.Forms.TextBox();
-            this.lb_cena = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.mlb_vards = new MetroFramework.Controls.MetroLabel();
+            this.mlb_garums = new MetroFramework.Controls.MetroLabel();
+            this.mlb_veltteksts = new MetroFramework.Controls.MetroLabel();
+            this.mlb_matcena = new MetroFramework.Controls.MetroLabel();
+            this.mlb_platums = new MetroFramework.Controls.MetroLabel();
+            this.mlb_infoparladiti = new MetroFramework.Controls.MetroLabel();
+            this.mlb_uzvards = new MetroFramework.Controls.MetroLabel();
+            this.mlb_augstums = new MetroFramework.Controls.MetroLabel();
+            this.mtb_vards = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_uzvards = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_platums = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_augstums = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_garums = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_veltteksts = new MetroFramework.Controls.MetroTextBox();
+            this.mtb_matcena = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lb_vards
-            // 
-            this.lb_vards.AutoSize = true;
-            this.lb_vards.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_vards.Location = new System.Drawing.Point(80, 34);
-            this.lb_vards.Name = "lb_vards";
-            this.lb_vards.Size = new System.Drawing.Size(34, 13);
-            this.lb_vards.TabIndex = 0;
-            this.lb_vards.Text = "Vārds";
-            // 
-            // lb_uzvards
-            // 
-            this.lb_uzvards.AutoSize = true;
-            this.lb_uzvards.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_uzvards.Location = new System.Drawing.Point(78, 68);
-            this.lb_uzvards.Name = "lb_uzvards";
-            this.lb_uzvards.Size = new System.Drawing.Size(46, 13);
-            this.lb_uzvards.TabIndex = 1;
-            this.lb_uzvards.Text = "Uzvārds";
-            // 
-            // lb_velt_teksts
-            // 
-            this.lb_velt_teksts.AutoSize = true;
-            this.lb_velt_teksts.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_velt_teksts.Location = new System.Drawing.Point(41, 265);
-            this.lb_velt_teksts.Name = "lb_velt_teksts";
-            this.lb_velt_teksts.Size = new System.Drawing.Size(81, 13);
-            this.lb_velt_teksts.TabIndex = 2;
-            this.lb_velt_teksts.Text = "Veltījuma teksts";
-            this.lb_velt_teksts.Click += new System.EventHandler(this.lb_velt_teksts_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.RosyBrown;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(103, 119);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Informācija par lādīti";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // lb_platums
-            // 
-            this.lb_platums.AutoSize = true;
-            this.lb_platums.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_platums.Location = new System.Drawing.Point(78, 154);
-            this.lb_platums.Name = "lb_platums";
-            this.lb_platums.Size = new System.Drawing.Size(44, 13);
-            this.lb_platums.TabIndex = 4;
-            this.lb_platums.Text = "Platums";
-            this.lb_platums.Click += new System.EventHandler(this.lb_platums_Click);
-            // 
-            // lb_augstums
-            // 
-            this.lb_augstums.AutoSize = true;
-            this.lb_augstums.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_augstums.Location = new System.Drawing.Point(77, 191);
-            this.lb_augstums.Name = "lb_augstums";
-            this.lb_augstums.Size = new System.Drawing.Size(53, 13);
-            this.lb_augstums.TabIndex = 5;
-            this.lb_augstums.Text = "Augstums";
-            this.lb_augstums.Click += new System.EventHandler(this.lb_augstums_Click);
-            // 
-            // lb_garums
-            // 
-            this.lb_garums.AutoSize = true;
-            this.lb_garums.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_garums.Location = new System.Drawing.Point(79, 229);
-            this.lb_garums.Name = "lb_garums";
-            this.lb_garums.Size = new System.Drawing.Size(43, 13);
-            this.lb_garums.TabIndex = 6;
-            this.lb_garums.Text = "Garums";
-            this.lb_garums.Click += new System.EventHandler(this.lb_garums_Click);
-            // 
-            // tb_vards
-            // 
-            this.tb_vards.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_vards.Location = new System.Drawing.Point(154, 34);
-            this.tb_vards.Name = "tb_vards";
-            this.tb_vards.Size = new System.Drawing.Size(100, 20);
-            this.tb_vards.TabIndex = 7;
-            // 
-            // tb_uzvards
-            // 
-            this.tb_uzvards.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_uzvards.Location = new System.Drawing.Point(154, 68);
-            this.tb_uzvards.Name = "tb_uzvards";
-            this.tb_uzvards.Size = new System.Drawing.Size(100, 20);
-            this.tb_uzvards.TabIndex = 8;
-            // 
-            // tb_velt_teksts
-            // 
-            this.tb_velt_teksts.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_velt_teksts.Location = new System.Drawing.Point(129, 265);
-            this.tb_velt_teksts.Name = "tb_velt_teksts";
-            this.tb_velt_teksts.Size = new System.Drawing.Size(100, 20);
-            this.tb_velt_teksts.TabIndex = 9;
-            this.tb_velt_teksts.TextChanged += new System.EventHandler(this.tb_velt_teksts_TextChanged);
-            // 
-            // tb_platums
-            // 
-            this.tb_platums.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_platums.Location = new System.Drawing.Point(129, 154);
-            this.tb_platums.Name = "tb_platums";
-            this.tb_platums.Size = new System.Drawing.Size(100, 20);
-            this.tb_platums.TabIndex = 10;
-            this.tb_platums.TextChanged += new System.EventHandler(this.tb_platums_TextChanged);
-            // 
-            // tb_augstums
-            // 
-            this.tb_augstums.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_augstums.Location = new System.Drawing.Point(129, 191);
-            this.tb_augstums.Name = "tb_augstums";
-            this.tb_augstums.Size = new System.Drawing.Size(100, 20);
-            this.tb_augstums.TabIndex = 11;
-            this.tb_augstums.TextChanged += new System.EventHandler(this.tb_augstums_TextChanged);
-            // 
-            // tb_garums
-            // 
-            this.tb_garums.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_garums.Location = new System.Drawing.Point(129, 229);
-            this.tb_garums.Name = "tb_garums";
-            this.tb_garums.Size = new System.Drawing.Size(100, 20);
-            this.tb_garums.TabIndex = 12;
-            this.tb_garums.TextChanged += new System.EventHandler(this.tb_garums_TextChanged);
-            // 
-            // tb_cena
-            // 
-            this.tb_cena.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tb_cena.Location = new System.Drawing.Point(129, 306);
-            this.tb_cena.Name = "tb_cena";
-            this.tb_cena.Size = new System.Drawing.Size(100, 20);
-            this.tb_cena.TabIndex = 13;
-            this.tb_cena.TextChanged += new System.EventHandler(this.tb_cena_TextChanged);
-            // 
-            // lb_cena
-            // 
-            this.lb_cena.AutoSize = true;
-            this.lb_cena.BackColor = System.Drawing.Color.MistyRose;
-            this.lb_cena.Location = new System.Drawing.Point(8, 306);
-            this.lb_cena.Name = "lb_cena";
-            this.lb_cena.Size = new System.Drawing.Size(114, 13);
-            this.lb_cena.TabIndex = 14;
-            this.lb_cena.Text = "Materiāla cena eur/m2";
-            this.lb_cena.Click += new System.EventHandler(this.lb_cena_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(769, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(139, 40);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Aprēķināt";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(724, 364);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 35);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Saglabāt failā";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // richTextBox1
             // 
@@ -229,19 +65,9 @@
             this.richTextBox1.TabIndex = 17;
             this.richTextBox1.Text = "";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(836, 364);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 35);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Saglabāt datubāzē";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(11, 465);
+            this.button4.Location = new System.Drawing.Point(12, 557);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(117, 32);
             this.button4.TabIndex = 19;
@@ -252,39 +78,401 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 503);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 595);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(724, 150);
             this.dataGridView1.TabIndex = 20;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(186, 557);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(94, 32);
+            this.button5.TabIndex = 21;
+            this.button5.Text = "Pievienot";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.SystemColors.Info;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button6.Location = new System.Drawing.Point(333, 557);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 32);
+            this.button6.TabIndex = 22;
+            this.button6.Text = "Atjaunot";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.RosyBrown;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button7.Location = new System.Drawing.Point(642, 557);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 32);
+            this.button7.TabIndex = 23;
+            this.button7.Text = "Dzēst";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.YellowGreen;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.button8.Location = new System.Drawing.Point(479, 557);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(94, 32);
+            this.button8.TabIndex = 24;
+            this.button8.Text = "Meklēt";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(785, 14);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(101, 34);
+            this.metroButton1.TabIndex = 25;
+            this.metroButton1.Text = "Aprēķināt";
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(724, 364);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(121, 40);
+            this.metroButton2.TabIndex = 26;
+            this.metroButton2.Text = "Saglabāt failā";
+            this.metroButton2.UseSelectable = true;
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(851, 364);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(105, 40);
+            this.metroButton3.TabIndex = 27;
+            this.metroButton3.Text = "Saglabāt datubāzē";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
+            // 
+            // mlb_vards
+            // 
+            this.mlb_vards.AutoSize = true;
+            this.mlb_vards.Location = new System.Drawing.Point(87, 34);
+            this.mlb_vards.Name = "mlb_vards";
+            this.mlb_vards.Size = new System.Drawing.Size(42, 19);
+            this.mlb_vards.TabIndex = 28;
+            this.mlb_vards.Text = "Vārds";
+            // 
+            // mlb_garums
+            // 
+            this.mlb_garums.AutoSize = true;
+            this.mlb_garums.Location = new System.Drawing.Point(88, 229);
+            this.mlb_garums.Name = "mlb_garums";
+            this.mlb_garums.Size = new System.Drawing.Size(54, 19);
+            this.mlb_garums.TabIndex = 29;
+            this.mlb_garums.Text = "Garums";
+            // 
+            // mlb_veltteksts
+            // 
+            this.mlb_veltteksts.AutoSize = true;
+            this.mlb_veltteksts.Location = new System.Drawing.Point(45, 265);
+            this.mlb_veltteksts.Name = "mlb_veltteksts";
+            this.mlb_veltteksts.Size = new System.Drawing.Size(97, 19);
+            this.mlb_veltteksts.TabIndex = 30;
+            this.mlb_veltteksts.Text = "Veltījuma teksts";
+            // 
+            // mlb_matcena
+            // 
+            this.mlb_matcena.AutoSize = true;
+            this.mlb_matcena.Location = new System.Drawing.Point(6, 307);
+            this.mlb_matcena.Name = "mlb_matcena";
+            this.mlb_matcena.Size = new System.Drawing.Size(142, 19);
+            this.mlb_matcena.TabIndex = 31;
+            this.mlb_matcena.Text = "Materiāla cena eur/m2";
+            // 
+            // mlb_platums
+            // 
+            this.mlb_platums.AutoSize = true;
+            this.mlb_platums.Location = new System.Drawing.Point(87, 155);
+            this.mlb_platums.Name = "mlb_platums";
+            this.mlb_platums.Size = new System.Drawing.Size(55, 19);
+            this.mlb_platums.TabIndex = 32;
+            this.mlb_platums.Text = "Platums";
+            // 
+            // mlb_infoparladiti
+            // 
+            this.mlb_infoparladiti.AutoSize = true;
+            this.mlb_infoparladiti.Location = new System.Drawing.Point(87, 119);
+            this.mlb_infoparladiti.Name = "mlb_infoparladiti";
+            this.mlb_infoparladiti.Size = new System.Drawing.Size(130, 19);
+            this.mlb_infoparladiti.TabIndex = 33;
+            this.mlb_infoparladiti.Text = "Informācija par lādīti";
+            // 
+            // mlb_uzvards
+            // 
+            this.mlb_uzvards.AutoSize = true;
+            this.mlb_uzvards.Location = new System.Drawing.Point(87, 68);
+            this.mlb_uzvards.Name = "mlb_uzvards";
+            this.mlb_uzvards.Size = new System.Drawing.Size(55, 19);
+            this.mlb_uzvards.TabIndex = 34;
+            this.mlb_uzvards.Text = "Uzvārds";
+            // 
+            // mlb_augstums
+            // 
+            this.mlb_augstums.AutoSize = true;
+            this.mlb_augstums.Location = new System.Drawing.Point(76, 191);
+            this.mlb_augstums.Name = "mlb_augstums";
+            this.mlb_augstums.Size = new System.Drawing.Size(66, 19);
+            this.mlb_augstums.TabIndex = 35;
+            this.mlb_augstums.Text = "Augstums";
+            // 
+            // mtb_vards
+            // 
+            // 
+            // 
+            // 
+            this.mtb_vards.CustomButton.Image = null;
+            this.mtb_vards.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_vards.CustomButton.Name = "";
+            this.mtb_vards.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_vards.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_vards.CustomButton.TabIndex = 1;
+            this.mtb_vards.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_vards.CustomButton.UseSelectable = true;
+            this.mtb_vards.CustomButton.Visible = false;
+            this.mtb_vards.Lines = new string[0];
+            this.mtb_vards.Location = new System.Drawing.Point(154, 34);
+            this.mtb_vards.MaxLength = 32767;
+            this.mtb_vards.Name = "mtb_vards";
+            this.mtb_vards.PasswordChar = '\0';
+            this.mtb_vards.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_vards.SelectedText = "";
+            this.mtb_vards.SelectionLength = 0;
+            this.mtb_vards.SelectionStart = 0;
+            this.mtb_vards.ShortcutsEnabled = true;
+            this.mtb_vards.Size = new System.Drawing.Size(75, 23);
+            this.mtb_vards.TabIndex = 36;
+            this.mtb_vards.UseSelectable = true;
+            this.mtb_vards.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_vards.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_uzvards
+            // 
+            // 
+            // 
+            // 
+            this.mtb_uzvards.CustomButton.Image = null;
+            this.mtb_uzvards.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_uzvards.CustomButton.Name = "";
+            this.mtb_uzvards.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_uzvards.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_uzvards.CustomButton.TabIndex = 1;
+            this.mtb_uzvards.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_uzvards.CustomButton.UseSelectable = true;
+            this.mtb_uzvards.CustomButton.Visible = false;
+            this.mtb_uzvards.Lines = new string[0];
+            this.mtb_uzvards.Location = new System.Drawing.Point(154, 64);
+            this.mtb_uzvards.MaxLength = 32767;
+            this.mtb_uzvards.Name = "mtb_uzvards";
+            this.mtb_uzvards.PasswordChar = '\0';
+            this.mtb_uzvards.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_uzvards.SelectedText = "";
+            this.mtb_uzvards.SelectionLength = 0;
+            this.mtb_uzvards.SelectionStart = 0;
+            this.mtb_uzvards.ShortcutsEnabled = true;
+            this.mtb_uzvards.Size = new System.Drawing.Size(75, 23);
+            this.mtb_uzvards.TabIndex = 37;
+            this.mtb_uzvards.UseSelectable = true;
+            this.mtb_uzvards.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_uzvards.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_platums
+            // 
+            // 
+            // 
+            // 
+            this.mtb_platums.CustomButton.Image = null;
+            this.mtb_platums.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_platums.CustomButton.Name = "";
+            this.mtb_platums.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_platums.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_platums.CustomButton.TabIndex = 1;
+            this.mtb_platums.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_platums.CustomButton.UseSelectable = true;
+            this.mtb_platums.CustomButton.Visible = false;
+            this.mtb_platums.Lines = new string[0];
+            this.mtb_platums.Location = new System.Drawing.Point(186, 155);
+            this.mtb_platums.MaxLength = 32767;
+            this.mtb_platums.Name = "mtb_platums";
+            this.mtb_platums.PasswordChar = '\0';
+            this.mtb_platums.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_platums.SelectedText = "";
+            this.mtb_platums.SelectionLength = 0;
+            this.mtb_platums.SelectionStart = 0;
+            this.mtb_platums.ShortcutsEnabled = true;
+            this.mtb_platums.Size = new System.Drawing.Size(75, 23);
+            this.mtb_platums.TabIndex = 38;
+            this.mtb_platums.UseSelectable = true;
+            this.mtb_platums.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_platums.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_augstums
+            // 
+            // 
+            // 
+            // 
+            this.mtb_augstums.CustomButton.Image = null;
+            this.mtb_augstums.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_augstums.CustomButton.Name = "";
+            this.mtb_augstums.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_augstums.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_augstums.CustomButton.TabIndex = 1;
+            this.mtb_augstums.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_augstums.CustomButton.UseSelectable = true;
+            this.mtb_augstums.CustomButton.Visible = false;
+            this.mtb_augstums.Lines = new string[0];
+            this.mtb_augstums.Location = new System.Drawing.Point(186, 191);
+            this.mtb_augstums.MaxLength = 32767;
+            this.mtb_augstums.Name = "mtb_augstums";
+            this.mtb_augstums.PasswordChar = '\0';
+            this.mtb_augstums.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_augstums.SelectedText = "";
+            this.mtb_augstums.SelectionLength = 0;
+            this.mtb_augstums.SelectionStart = 0;
+            this.mtb_augstums.ShortcutsEnabled = true;
+            this.mtb_augstums.Size = new System.Drawing.Size(75, 23);
+            this.mtb_augstums.TabIndex = 39;
+            this.mtb_augstums.UseSelectable = true;
+            this.mtb_augstums.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_augstums.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_garums
+            // 
+            // 
+            // 
+            // 
+            this.mtb_garums.CustomButton.Image = null;
+            this.mtb_garums.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_garums.CustomButton.Name = "";
+            this.mtb_garums.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_garums.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_garums.CustomButton.TabIndex = 1;
+            this.mtb_garums.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_garums.CustomButton.UseSelectable = true;
+            this.mtb_garums.CustomButton.Visible = false;
+            this.mtb_garums.Lines = new string[0];
+            this.mtb_garums.Location = new System.Drawing.Point(186, 229);
+            this.mtb_garums.MaxLength = 32767;
+            this.mtb_garums.Name = "mtb_garums";
+            this.mtb_garums.PasswordChar = '\0';
+            this.mtb_garums.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_garums.SelectedText = "";
+            this.mtb_garums.SelectionLength = 0;
+            this.mtb_garums.SelectionStart = 0;
+            this.mtb_garums.ShortcutsEnabled = true;
+            this.mtb_garums.Size = new System.Drawing.Size(75, 23);
+            this.mtb_garums.TabIndex = 40;
+            this.mtb_garums.UseSelectable = true;
+            this.mtb_garums.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_garums.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_veltteksts
+            // 
+            // 
+            // 
+            // 
+            this.mtb_veltteksts.CustomButton.Image = null;
+            this.mtb_veltteksts.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_veltteksts.CustomButton.Name = "";
+            this.mtb_veltteksts.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_veltteksts.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_veltteksts.CustomButton.TabIndex = 1;
+            this.mtb_veltteksts.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_veltteksts.CustomButton.UseSelectable = true;
+            this.mtb_veltteksts.CustomButton.Visible = false;
+            this.mtb_veltteksts.Lines = new string[0];
+            this.mtb_veltteksts.Location = new System.Drawing.Point(186, 265);
+            this.mtb_veltteksts.MaxLength = 32767;
+            this.mtb_veltteksts.Name = "mtb_veltteksts";
+            this.mtb_veltteksts.PasswordChar = '\0';
+            this.mtb_veltteksts.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_veltteksts.SelectedText = "";
+            this.mtb_veltteksts.SelectionLength = 0;
+            this.mtb_veltteksts.SelectionStart = 0;
+            this.mtb_veltteksts.ShortcutsEnabled = true;
+            this.mtb_veltteksts.Size = new System.Drawing.Size(75, 23);
+            this.mtb_veltteksts.TabIndex = 41;
+            this.mtb_veltteksts.UseSelectable = true;
+            this.mtb_veltteksts.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_veltteksts.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // mtb_matcena
+            // 
+            // 
+            // 
+            // 
+            this.mtb_matcena.CustomButton.Image = null;
+            this.mtb_matcena.CustomButton.Location = new System.Drawing.Point(53, 1);
+            this.mtb_matcena.CustomButton.Name = "";
+            this.mtb_matcena.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.mtb_matcena.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.mtb_matcena.CustomButton.TabIndex = 1;
+            this.mtb_matcena.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.mtb_matcena.CustomButton.UseSelectable = true;
+            this.mtb_matcena.CustomButton.Visible = false;
+            this.mtb_matcena.Lines = new string[0];
+            this.mtb_matcena.Location = new System.Drawing.Point(186, 307);
+            this.mtb_matcena.MaxLength = 32767;
+            this.mtb_matcena.Name = "mtb_matcena";
+            this.mtb_matcena.PasswordChar = '\0';
+            this.mtb_matcena.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.mtb_matcena.SelectedText = "";
+            this.mtb_matcena.SelectionLength = 0;
+            this.mtb_matcena.SelectionStart = 0;
+            this.mtb_matcena.ShortcutsEnabled = true;
+            this.mtb_matcena.Size = new System.Drawing.Size(75, 23);
+            this.mtb_matcena.TabIndex = 42;
+            this.mtb_matcena.UseSelectable = true;
+            this.mtb_matcena.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.mtb_matcena.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::uldis_ladite.Properties.Resources.atminulade1;
             this.ClientSize = new System.Drawing.Size(980, 757);
+            this.Controls.Add(this.mtb_matcena);
+            this.Controls.Add(this.mtb_veltteksts);
+            this.Controls.Add(this.mtb_garums);
+            this.Controls.Add(this.mtb_augstums);
+            this.Controls.Add(this.mtb_platums);
+            this.Controls.Add(this.mtb_uzvards);
+            this.Controls.Add(this.mtb_vards);
+            this.Controls.Add(this.mlb_augstums);
+            this.Controls.Add(this.mlb_uzvards);
+            this.Controls.Add(this.mlb_infoparladiti);
+            this.Controls.Add(this.mlb_platums);
+            this.Controls.Add(this.mlb_matcena);
+            this.Controls.Add(this.mlb_veltteksts);
+            this.Controls.Add(this.mlb_garums);
+            this.Controls.Add(this.mlb_vards);
+            this.Controls.Add(this.metroButton3);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.lb_cena);
-            this.Controls.Add(this.tb_cena);
-            this.Controls.Add(this.tb_garums);
-            this.Controls.Add(this.tb_augstums);
-            this.Controls.Add(this.tb_platums);
-            this.Controls.Add(this.tb_velt_teksts);
-            this.Controls.Add(this.tb_uzvards);
-            this.Controls.Add(this.tb_vards);
-            this.Controls.Add(this.lb_garums);
-            this.Controls.Add(this.lb_augstums);
-            this.Controls.Add(this.lb_platums);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.lb_velt_teksts);
-            this.Controls.Add(this.lb_uzvards);
-            this.Controls.Add(this.lb_vards);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -296,28 +484,31 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lb_vards;
-        private System.Windows.Forms.Label lb_uzvards;
-        private System.Windows.Forms.Label lb_velt_teksts;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lb_platums;
-        private System.Windows.Forms.Label lb_augstums;
-        private System.Windows.Forms.Label lb_garums;
-        private System.Windows.Forms.TextBox tb_vards;
-        private System.Windows.Forms.TextBox tb_uzvards;
-        private System.Windows.Forms.TextBox tb_velt_teksts;
-        private System.Windows.Forms.TextBox tb_platums;
-        private System.Windows.Forms.TextBox tb_augstums;
-        private System.Windows.Forms.TextBox tb_garums;
-        private System.Windows.Forms.TextBox tb_cena;
-        private System.Windows.Forms.Label lb_cena;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroLabel mlb_vards;
+        private MetroFramework.Controls.MetroLabel mlb_garums;
+        private MetroFramework.Controls.MetroLabel mlb_veltteksts;
+        private MetroFramework.Controls.MetroLabel mlb_matcena;
+        private MetroFramework.Controls.MetroLabel mlb_platums;
+        private MetroFramework.Controls.MetroLabel mlb_infoparladiti;
+        private MetroFramework.Controls.MetroLabel mlb_uzvards;
+        private MetroFramework.Controls.MetroLabel mlb_augstums;
+        private MetroFramework.Controls.MetroTextBox mtb_vards;
+        private MetroFramework.Controls.MetroTextBox mtb_uzvards;
+        private MetroFramework.Controls.MetroTextBox mtb_platums;
+        private MetroFramework.Controls.MetroTextBox mtb_augstums;
+        private MetroFramework.Controls.MetroTextBox mtb_garums;
+        private MetroFramework.Controls.MetroTextBox mtb_veltteksts;
+        private MetroFramework.Controls.MetroTextBox mtb_matcena;
     }
 }
 

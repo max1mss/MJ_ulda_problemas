@@ -43,18 +43,18 @@ namespace uldis_ladite
         private void button1_Click(object sender, EventArgs e)
             {
             //Pārveido vēlējumu stringu uz int
-            string varda_ga = tb_velt_teksts.Text;
+            string varda_ga = mtb_veltteksts.Text;
             int gar = varda_ga.Length;
 
             // Pārbauda vai visas nepieciešamās vērtības ir 
             if (
-                int.TryParse(tb_platums.Text, out int platums) &&
-                int.TryParse(tb_garums.Text, out int garums) &&
-                int.TryParse(tb_augstums.Text, out int augstums) &&
-                int.TryParse(tb_cena.Text, out int materiala_cena))
+                int.TryParse(mtb_platums.Text, out int platums) &&
+                int.TryParse(mtb_garums.Text, out int garums) &&
+                int.TryParse(mtb_augstums.Text, out int augstums) &&
+                int.TryParse(mtb_matcena.Text, out int materiala_cena))
             {
                 //  saksaita characters tb_veltijums un reizina ar 1.2
-                string inputText = tb_velt_teksts.Text;
+                string inputText = mtb_veltteksts.Text;
                 int charCount = inputText.Length;
                 double multipliedCount = charCount * 1.2;
 
@@ -93,13 +93,13 @@ namespace uldis_ladite
             {
                 // Izveidojam jaunu mapi ar failu, kur saglabāsies informācija
 
-                a.WriteLine(lb_vards.Text + " " + tb_vards.Text);
-                a.WriteLine(lb_uzvards.Text + " " + tb_uzvards.Text);
-                a.WriteLine(lb_platums.Text + " " + tb_platums.Text);
-                a.WriteLine(lb_garums.Text + " " + tb_garums.Text);
-                a.WriteLine(lb_augstums.Text + " " + tb_augstums.Text);
-                a.WriteLine(lb_velt_teksts.Text + " " + tb_velt_teksts.Text);
-                a.WriteLine(lb_cena.Text + " " + tb_cena.Text);
+                a.WriteLine(mlb_vards.Text + " " + mtb_vards.Text);
+                a.WriteLine(mlb_uzvards.Text + " " + mtb_uzvards.Text);
+                a.WriteLine(mlb_platums.Text + " " + mtb_platums.Text);
+                a.WriteLine(mlb_garums.Text + " " + mtb_garums.Text);
+                a.WriteLine(mlb_augstums.Text + " " + mtb_augstums.Text);
+                a.WriteLine(mlb_veltteksts.Text + " " + mtb_veltteksts.Text);
+                a.WriteLine(mlb_matcena.Text + " " + mtb_matcena.Text);
 
                 
                 a.Close();
@@ -117,8 +117,8 @@ namespace uldis_ladite
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = sqlite_conn.CreateCommand();
                 sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
-                                         "VALUES('" + tb_vards.Text + "', '" + tb_uzvards.Text + "', '" +
-                                         tb_velt_teksts.Text + "', '" + tb_garums.Text + "', '" + tb_platums.Text + "', '"+tb_augstums.Text+"', '"+tb_cena.Text+"');";
+                                         "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
+                                         mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '"+mtb_augstums.Text+"', '"+mtb_matcena.Text+"');";
                 sqlite_cmd.ExecuteNonQuery();
 
                 // Izvadām lodziņu, ja lietotājs ievadīja visu info.
@@ -132,13 +132,13 @@ namespace uldis_ladite
         private bool AreFieldsFilled()
         {
             // Pārbaudām vai ir aizpildīti visi lodziņi
-            return !string.IsNullOrEmpty(tb_vards.Text) &&
-                   !string.IsNullOrEmpty(tb_uzvards.Text) &&
-                   !string.IsNullOrEmpty(tb_velt_teksts.Text) &&
-                   !string.IsNullOrEmpty(tb_garums.Text) &&
-                   !string.IsNullOrEmpty(tb_platums.Text) &&
-                   !string.IsNullOrEmpty(tb_augstums.Text) &&
-                   !string.IsNullOrEmpty(tb_cena.Text);
+            return !string.IsNullOrEmpty(mtb_vards.Text) &&
+                   !string.IsNullOrEmpty(mtb_uzvards.Text) &&
+                   !string.IsNullOrEmpty(mtb_veltteksts.Text) &&
+                   !string.IsNullOrEmpty(mtb_garums.Text) &&
+                   !string.IsNullOrEmpty(mtb_platums.Text) &&
+                   !string.IsNullOrEmpty(mtb_augstums.Text) &&
+                   !string.IsNullOrEmpty(mtb_matcena.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -222,9 +222,127 @@ namespace uldis_ladite
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string vards = mtb_vards.Text;
+            string uzvards = mtb_uzvards.Text;
+            string veltteksts = mtb_veltteksts.Text;
+
+            int platums = int.Parse(mtb_platums.Text);
+            int augstums = int.Parse(mtb_augstums.Text);
+            int garums = int.Parse(mtb_garums.Text);
+            int matcena = int.Parse(mtb_matcena.Text);
+
+
+            string insertQuery = $"INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena)" +
+                $" VALUES ('{vards}', '{uzvards}', '{veltteksts}', '{garums}', '{platums}', '{augstums}', '{matcena}')";
+            ExecuteQuery(insertQuery);
+            MessageBox.Show("Record inserted successfully.");
+        }
+
+        private void ExecuteQuery(string insertQuery)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            //Pārveido vēlējumu stringu uz int
+            string varda_ga = mtb_veltteksts.Text;
+            int gar = varda_ga.Length;
+
+            // Pārbauda vai visas nepieciešamās vērtības ir 
+            if (
+                int.TryParse(mlb_platums.Text, out int platums) &&
+                int.TryParse(mlb_garums.Text, out int garums) &&
+                int.TryParse(mlb_augstums.Text, out int augstums) &&
+                int.TryParse(mlb_matcena.Text, out int materiala_cena))
+            {
+                //  saksaita characters tb_veltijums un reizina ar 1.2
+                string inputText = mlb_veltteksts.Text;
+                int charCount = inputText.Length;
+                double multipliedCount = charCount * 1.2;
+
+                // veic matemātiku
+                double produkta_cena = (gar * 1.2) + ((platums / 100) * (augstums / 100) * (garums / 100)) / 3 * materiala_cena;
+                double PVN_summa = (produkta_cena + darba_samaksa) * PVN / 100;
+                double rekina_summa = produkta_cena + darba_samaksa + PVN_summa;
+
+                // Parāda to RichTextBox
+                richTextBox1.Text = $"Produkta cena: {produkta_cena:C}\n" +
+                                   $"PVN summa: {PVN_summa:C}\n" +
+                                   $"Rekina summa: {rekina_summa:C}\n";
+
+
+
+
+
+            }
+            else
+            {
+                // Kļūdas gadījumā programma izvada paziņojumu
+                richTextBox1.Text = "Iavadiet lūdzu pareizi.";
+            }
+
+
+
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            using (StreamWriter a = new StreamWriter("Cheks.txt"))
+            {
+                // Izveidojam jaunu mapi ar failu, kur saglabāsies informācija
+
+                a.WriteLine(mlb_vards.Text + " " + mtb_vards.Text);
+                a.WriteLine(mlb_uzvards.Text + " " + mtb_uzvards.Text);
+                a.WriteLine(mlb_platums.Text + " " + mtb_platums.Text);
+                a.WriteLine(mlb_garums.Text + " " + mtb_garums.Text);
+                a.WriteLine(mlb_augstums.Text + " " + mtb_augstums.Text);
+                a.WriteLine(mlb_veltteksts.Text + " " + mtb_veltteksts.Text);
+                a.WriteLine(mlb_matcena.Text + " " + mtb_matcena.Text);
+
+
+                a.Close();
+                MessageBox.Show("Veiksmīgi saglabāts failā!");
+            }
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+            if (AreFieldsFilled())
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = CreateConnection();
+
+                SQLiteCommand sqlite_cmd;
+                sqlite_cmd = sqlite_conn.CreateCommand();
+                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
+                                         "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
+                                         mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '" + mtb_augstums.Text + "', '" + mtb_matcena.Text + "');";
+                sqlite_cmd.ExecuteNonQuery();
+
+                // Izvadām lodziņu, ja lietotājs ievadīja visu info.
+                MessageBox.Show("Jūs veiksmīgi saglabājāt informāciju datubāzē!");
+            }
+            else
+            {
+                MessageBox.Show("Lūdzu ievadiet visus datus!");
+            }
+        }
     }
+    
+    
 }
 
 
 //Pamēģināt uztaisīt matemātiku ar komatiem private void button1_Click
 // poga - apskatīt datubāzi, atver jaunu logu ar datubāzes pārskatu
+// Login
+// https://www.youtube.com/watch?v=aer8S1fFbNc&ab_channel=SwiftLearn With SQL | Insert Update Delete and Search
