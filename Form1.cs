@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 using System.Reflection.Emit;
+using MetroFramework.Components;
+using System.Data.SqlClient;
 
 namespace uldis_ladite
 {
@@ -107,28 +109,7 @@ namespace uldis_ladite
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (AreFieldsFilled())
-            {
-                SQLiteConnection sqlite_conn;
-                sqlite_conn = CreateConnection();
-
-                SQLiteCommand sqlite_cmd;
-                sqlite_cmd = sqlite_conn.CreateCommand();
-                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
-                                         "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
-                                         mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '"+mtb_augstums.Text+"', '"+mtb_matcena.Text+"');";
-                sqlite_cmd.ExecuteNonQuery();
-
-                // Izvadām lodziņu, ja lietotājs ievadīja visu info.
-                MessageBox.Show("Jūs veiksmīgi saglabājāt informāciju datubāzē!");
-            }
-            else
-            {
-                MessageBox.Show("Lūdzu ievadiet visus datus!");
-            }
-        }
+       
         private bool AreFieldsFilled()
         {
             // Pārbaudām vai ir aizpildīti visi lodziņi
@@ -141,104 +122,32 @@ namespace uldis_ladite
                    !string.IsNullOrEmpty(mtb_matcena.Text);
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            SQLiteConnection sqlite_conn;
-            sqlite_conn = CreateConnection();
+        
 
-            SQLiteCommand sqlite_cmd;
-            sqlite_cmd = sqlite_conn.CreateCommand();
-            sqlite_cmd.CommandText = "SELECT * FROM Uldaizmaksas";
-
-            DataTable sTable;
-            SQLiteDataAdapter sqlda = new SQLiteDataAdapter(sqlite_cmd);
-            using (sTable = new DataTable())
-            {
-                sqlda.Fill(sTable);
-                dataGridView1.DataSource = sTable;
-            }
-
-            /*if (sTable.Rows.Count > 0)
-            {
-                lb_vards.Text = sTable.Rows[0]["Vards"].ToString();
-            }
-            else
-            {
-                lb_uzvards.Text = "Nav atrasts!";
-            }*/
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_garums_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_augstums_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_platums_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_velt_teksts_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_garums_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_augstums_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_platums_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_cena_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_velt_teksts_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lb_cena_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string vards = mtb_vards.Text;
-            string uzvards = mtb_uzvards.Text;
-            string veltteksts = mtb_veltteksts.Text;
+            
+            if (AreFieldsFilled())
+            {
+                SQLiteConnection sqlite_conn;
+                sqlite_conn = CreateConnection();
 
-            int platums = int.Parse(mtb_platums.Text);
-            int augstums = int.Parse(mtb_augstums.Text);
-            int garums = int.Parse(mtb_garums.Text);
-            int matcena = int.Parse(mtb_matcena.Text);
+                SQLiteCommand sqlite_cmd;
+                sqlite_cmd = sqlite_conn.CreateCommand();
+                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
+                                         "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
+                                         mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '" + mtb_augstums.Text + "', '" + mtb_matcena.Text + "');";
+                sqlite_cmd.ExecuteNonQuery();
 
-
-            string insertQuery = $"INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena)" +
-                $" VALUES ('{vards}', '{uzvards}', '{veltteksts}', '{garums}', '{platums}', '{augstums}', '{matcena}')";
-            ExecuteQuery(insertQuery);
-            MessageBox.Show("Record inserted successfully.");
+                // Izvadām lodziņu, ja lietotājs ievadīja visu info.
+                MessageBox.Show("Jūs veiksmīgi saglabājāt informāciju datubāzē!");
+            }
+            else
+            {
+                MessageBox.Show("Lūdzu ievadiet visus datus!");
+            }
         }
 
         private void ExecuteQuery(string insertQuery)
@@ -259,13 +168,13 @@ namespace uldis_ladite
 
             // Pārbauda vai visas nepieciešamās vērtības ir 
             if (
-                int.TryParse(mlb_platums.Text, out int platums) &&
-                int.TryParse(mlb_garums.Text, out int garums) &&
-                int.TryParse(mlb_augstums.Text, out int augstums) &&
-                int.TryParse(mlb_matcena.Text, out int materiala_cena))
+                int.TryParse(mtb_platums.Text, out int platums) &&
+                int.TryParse(mtb_garums.Text, out int garums) &&
+                int.TryParse(mtb_augstums.Text, out int augstums) &&
+                int.TryParse(mtb_matcena.Text, out int materiala_cena))
             {
                 //  saksaita characters tb_veltijums un reizina ar 1.2
-                string inputText = mlb_veltteksts.Text;
+                string inputText = mtb_veltteksts.Text;
                 int charCount = inputText.Length;
                 double multipliedCount = charCount * 1.2;
 
@@ -289,7 +198,7 @@ namespace uldis_ladite
                 // Kļūdas gadījumā programma izvada paziņojumu
                 richTextBox1.Text = "Iavadiet lūdzu pareizi.";
             }
-
+            
 
 
         }
@@ -300,13 +209,13 @@ namespace uldis_ladite
             {
                 // Izveidojam jaunu mapi ar failu, kur saglabāsies informācija
 
-                a.WriteLine(mlb_vards.Text + " " + mtb_vards.Text);
-                a.WriteLine(mlb_uzvards.Text + " " + mtb_uzvards.Text);
-                a.WriteLine(mlb_platums.Text + " " + mtb_platums.Text);
-                a.WriteLine(mlb_garums.Text + " " + mtb_garums.Text);
-                a.WriteLine(mlb_augstums.Text + " " + mtb_augstums.Text);
-                a.WriteLine(mlb_veltteksts.Text + " " + mtb_veltteksts.Text);
-                a.WriteLine(mlb_matcena.Text + " " + mtb_matcena.Text);
+                a.WriteLine(mlb_vards.Text + " - " + mtb_vards.Text);
+                a.WriteLine(mlb_uzvards.Text + " - " + mtb_uzvards.Text);
+                a.WriteLine(mlb_platums.Text + " - " + mtb_platums.Text);
+                a.WriteLine(mlb_garums.Text + " - " + mtb_garums.Text);
+                a.WriteLine(mlb_augstums.Text + " - " + mtb_augstums.Text);
+                a.WriteLine(mlb_veltteksts.Text + " - " + mtb_veltteksts.Text);
+                a.WriteLine(mlb_matcena.Text + " - " + mtb_matcena.Text);
 
 
                 a.Close();
@@ -336,6 +245,79 @@ namespace uldis_ladite
                 MessageBox.Show("Lūdzu ievadiet visus datus!");
             }
         }
+
+        private void metroButton3_Click_1(object sender, EventArgs e)
+        {
+            SQLiteConnection sqlite_conn;
+            sqlite_conn = CreateConnection();
+
+            SQLiteCommand sqlite_cmd;
+            sqlite_cmd = sqlite_conn.CreateCommand();
+            sqlite_cmd.CommandText = "SELECT * FROM Uldaizmaksas";
+
+            DataTable sTable;
+            SQLiteDataAdapter sqlda = new SQLiteDataAdapter(sqlite_cmd);
+            using (sTable = new DataTable())
+            {
+                sqlda.Fill(sTable);
+                dataGridView1.DataSource = sTable;
+            }
+            sqlite_conn.Close();
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            // Pārbaudam, vai ir iezīmētas rindas
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // Atgūstam iezīmēto rindu indeksus
+                foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                {
+                    // Pārbaudam, vai rinda ir derīga
+                    if (!row.IsNewRow)
+                    {
+                        // Atgūstam iezīmētās rindas ID no datagridview, ja jūsu datu tabula ir saistīta ar datubāzi un ir ID kolonna
+                        int id = Convert.ToInt32(row.Cells["ID"].Value); // Aizstājiet "ID" ar savas tabulas primārās atslēgas kolonnas nosaukumu
+
+                        // Izveidojam savienojumu ar datubāzi
+                        using (SQLiteConnection sqlite_conn = CreateConnection())
+                        {
+                            //sqlite_conn.Open();
+
+                            // Izdzēšam iezīmēto ierakstu no datubāzes
+                            string deleteQuery = "DELETE FROM Uldaizmaksas WHERE ID = @id"; // Aizstājiet "Uldaizmaksas" ar savas tabulas nosaukumu
+                            using (SQLiteCommand cmd = new SQLiteCommand(deleteQuery, sqlite_conn))
+                            {
+                                cmd.Parameters.AddWithValue("@id", id);
+                                cmd.ExecuteNonQuery();
+                            }
+                        }
+                    }
+                }
+
+                // Atjaunojam datagridview, lai atspoguļotu veiktos izmaiņas datubāzē
+                button6_Click(sender, e); // Pielāgojiet šo atsauci, lai tas atbilstu jūsu faktiskajam atjaunošanas pasākumam
+            }
+            else
+            {
+                MessageBox.Show("Iezīmējiet rindas, kuras vēlaties dzēst!");
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection("Data Source=Ulda_ladite.db;Version=3;"))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("Select * from Ulda_ladite where Vards=@mtb_vards", con);
+                cmd.Parameters.AddWithValue("@mtb_vards", int.Parse(mtb_vards.Text));
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+        }
     }
     
     
@@ -344,5 +326,6 @@ namespace uldis_ladite
 
 //Pamēģināt uztaisīt matemātiku ar komatiem private void button1_Click
 // poga - apskatīt datubāzi, atver jaunu logu ar datubāzes pārskatu
-// Login
+// Poga aizvērt
 // https://www.youtube.com/watch?v=aer8S1fFbNc&ab_channel=SwiftLearn With SQL | Insert Update Delete and Search
+// search 13:52

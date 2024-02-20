@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -37,7 +36,6 @@
             this.button8 = new System.Windows.Forms.Button();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.mlb_vards = new MetroFramework.Controls.MetroLabel();
             this.mlb_garums = new MetroFramework.Controls.MetroLabel();
             this.mlb_veltteksts = new MetroFramework.Controls.MetroLabel();
@@ -53,6 +51,7 @@
             this.mtb_garums = new MetroFramework.Controls.MetroTextBox();
             this.mtb_veltteksts = new MetroFramework.Controls.MetroTextBox();
             this.mtb_matcena = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton3 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,16 +63,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(232, 304);
             this.richTextBox1.TabIndex = 17;
             this.richTextBox1.Text = "";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(12, 557);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(117, 32);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Apskatīt datubāzi";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
             // 
@@ -117,6 +106,7 @@
             this.button7.TabIndex = 23;
             this.button7.Text = "Dzēst";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
@@ -128,12 +118,13 @@
             this.button8.TabIndex = 24;
             this.button8.Text = "Meklēt";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(785, 14);
+            this.metroButton1.Location = new System.Drawing.Point(724, 8);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(101, 34);
+            this.metroButton1.Size = new System.Drawing.Size(107, 40);
             this.metroButton1.TabIndex = 25;
             this.metroButton1.Text = "Aprēķināt";
             this.metroButton1.UseSelectable = true;
@@ -141,23 +132,13 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(724, 364);
+            this.metroButton2.Location = new System.Drawing.Point(849, 8);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(121, 40);
+            this.metroButton2.Size = new System.Drawing.Size(107, 40);
             this.metroButton2.TabIndex = 26;
             this.metroButton2.Text = "Saglabāt failā";
             this.metroButton2.UseSelectable = true;
             this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(851, 364);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(105, 40);
-            this.metroButton3.TabIndex = 27;
-            this.metroButton3.Text = "Saglabāt datubāzē";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
             // 
             // mlb_vards
             // 
@@ -441,6 +422,16 @@
             this.mtb_matcena.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.mtb_matcena.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // metroButton3
+            // 
+            this.metroButton3.Location = new System.Drawing.Point(12, 557);
+            this.metroButton3.Name = "metroButton3";
+            this.metroButton3.Size = new System.Drawing.Size(110, 32);
+            this.metroButton3.TabIndex = 43;
+            this.metroButton3.Text = "Apskatīt datubāzi";
+            this.metroButton3.UseSelectable = true;
+            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,6 +439,7 @@
             this.BackColor = System.Drawing.Color.IndianRed;
             this.BackgroundImage = global::uldis_ladite.Properties.Resources.atminulade1;
             this.ClientSize = new System.Drawing.Size(980, 757);
+            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.mtb_matcena);
             this.Controls.Add(this.mtb_veltteksts);
             this.Controls.Add(this.mtb_garums);
@@ -463,7 +455,6 @@
             this.Controls.Add(this.mlb_veltteksts);
             this.Controls.Add(this.mlb_garums);
             this.Controls.Add(this.mlb_vards);
-            this.Controls.Add(this.metroButton3);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.button8);
@@ -471,7 +462,6 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
@@ -485,7 +475,6 @@
 
         #endregion
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -493,7 +482,6 @@
         private System.Windows.Forms.Button button8;
         private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroLabel mlb_vards;
         private MetroFramework.Controls.MetroLabel mlb_garums;
         private MetroFramework.Controls.MetroLabel mlb_veltteksts;
@@ -509,6 +497,7 @@
         private MetroFramework.Controls.MetroTextBox mtb_garums;
         private MetroFramework.Controls.MetroTextBox mtb_veltteksts;
         private MetroFramework.Controls.MetroTextBox mtb_matcena;
+        private MetroFramework.Controls.MetroButton metroButton3;
     }
 }
 
