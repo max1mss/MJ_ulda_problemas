@@ -79,5 +79,35 @@ namespace uldis_ladite.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap close {
+            get {
+                object obj = ResourceManager.GetObject("close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_transparent_computer_icons_close_button_trademark_logo_sign_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("png-transparent-computer-icons-close-button-trademark-logo-sign-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pngtree_icon_close_button_png_image_1357822 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-icon-close-button-png-image_1357822", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

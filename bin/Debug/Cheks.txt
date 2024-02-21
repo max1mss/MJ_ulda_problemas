@@ -1,7 +1,7 @@
-Vārds - x
-Uzvārds - a
-Platums - 2
-Garums - 2
-Augstums - 2
-Veltījuma teksts - 4
-Materiāla cena eur/m2 - 2
+Vārds - 
+Uzvārds - 
+Platums - 
+Garums - 
+Augstums - 
+Veltījuma teksts - 
+Materiāla cena eur/m2 - 

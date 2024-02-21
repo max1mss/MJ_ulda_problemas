@@ -318,6 +318,11 @@ namespace uldis_ladite
                 dataGridView1.DataSource = dt;
             }
         }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
     
     

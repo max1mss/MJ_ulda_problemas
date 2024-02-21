@@ -115,6 +115,15 @@
   <ItemGroup>
     <None Include="Resources\atminulade1.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-close-button-trademark-logo-sign-thumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-icon-close-button-png-image_1357822.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
