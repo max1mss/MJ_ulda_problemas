@@ -58,3 +58,6 @@ C:\Users\proma\Desktop\uldis_ladite\uldis_ladite\obj\Debug\uldis_ladite.pdb
 C:\Users\mj2601\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.Design.dll
 C:\Users\mj2601\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.dll
 C:\Users\mj2601\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\proma\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.Design.dll
+C:\Users\proma\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.dll
+C:\Users\proma\Desktop\uldis_ladite\uldis_ladite\bin\Debug\MetroFramework.Fonts.dll

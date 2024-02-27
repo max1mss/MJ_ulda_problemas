@@ -12,11 +12,16 @@ using System.IO;
 using System.Reflection.Emit;
 using MetroFramework.Components;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace uldis_ladite
 {
     public partial class Form1 : Form
     {
+        // Deklarējam mainīgos klases līmenī, lai tie būtu globāli pieejami visā klasē
+        private double produkta_cena;
+        private double PVN_summa;
+        private double rekina_summa;
         public Form1()
         {
             InitializeComponent();
@@ -136,7 +141,7 @@ namespace uldis_ladite
 
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = sqlite_conn.CreateCommand();
-                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
+                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vārds, Uzvārds, Vēltījums, Lādītesgarums, Lādītesplatums, Lādītesaugstums, Kokmateriālacena) " +
                                          "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
                                          mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '" + mtb_augstums.Text + "', '" + mtb_matcena.Text + "');";
                 sqlite_cmd.ExecuteNonQuery();
@@ -186,7 +191,7 @@ namespace uldis_ladite
                 // Parāda to RichTextBox
                 richTextBox1.Text = $"Produkta cena: {produkta_cena:C}\n" +
                                    $"PVN summa: {PVN_summa:C}\n" +
-                                   $"Rekina summa: {rekina_summa:C}\n";
+                                   $"Rēķina summa: {rekina_summa:C}\n";
 
 
 
@@ -205,6 +210,8 @@ namespace uldis_ladite
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
+            
+
             using (StreamWriter a = new StreamWriter("Cheks.txt"))
             {
                 // Izveidojam jaunu mapi ar failu, kur saglabāsies informācija
@@ -216,12 +223,19 @@ namespace uldis_ladite
                 a.WriteLine(mlb_augstums.Text + " - " + mtb_augstums.Text);
                 a.WriteLine(mlb_veltteksts.Text + " - " + mtb_veltteksts.Text);
                 a.WriteLine(mlb_matcena.Text + " - " + mtb_matcena.Text);
+                a.WriteLine("Produkta cena" + " - " + produkta_cena);
+                a.WriteLine("PVN summa" + " - " + PVN_summa);
+                a.WriteLine("Rēķina summa" + " - " + rekina_summa);
 
 
                 a.Close();
                 MessageBox.Show("Veiksmīgi saglabāts failā!");
             }
         }
+
+
+
+
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
@@ -232,7 +246,7 @@ namespace uldis_ladite
 
                 SQLiteCommand sqlite_cmd;
                 sqlite_cmd = sqlite_conn.CreateCommand();
-                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vards, Uzvards, Velejums, Laditesgarums, Laditesplatums, Laditesaugstums, Kokmaterialacena) " +
+                sqlite_cmd.CommandText = "INSERT INTO Uldaizmaksas (Vārds, Uzvārds, Vēltījums, Lādītesgarums, Lādītesplatums, Lādītesaugstums, Kokmateriālacena) " +
                                          "VALUES('" + mtb_vards.Text + "', '" + mtb_uzvards.Text + "', '" +
                                          mtb_veltteksts.Text + "', '" + mtb_garums.Text + "', '" + mtb_platums.Text + "', '" + mtb_augstums.Text + "', '" + mtb_matcena.Text + "');";
                 sqlite_cmd.ExecuteNonQuery();
@@ -294,7 +308,10 @@ namespace uldis_ladite
                             }
                         }
                     }
+                    // Izvadām lodziņu, ja lietotājs ievadīja visu info.
+                    MessageBox.Show("Veiksmīgi dzēsts no datubāzes!");
                 }
+
 
                 // Atjaunojam datagridview, lai atspoguļotu veiktos izmaiņas datubāzē
                 button6_Click(sender, e); // Pielāgojiet šo atsauci, lai tas atbilstu jūsu faktiskajam atjaunošanas pasākumam
@@ -310,7 +327,7 @@ namespace uldis_ladite
             using (SqlConnection con = new SqlConnection("Data Source=Ulda_ladite.db;Version=3;"))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Select * from Ulda_ladite where Vards=@mtb_vards", con);
+                SqlCommand cmd = new SqlCommand("Select * from Ulda_ladite where Vārds=@mtb_vards", con);
                 cmd.Parameters.AddWithValue("@mtb_vards", int.Parse(mtb_vards.Text));
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -322,6 +339,34 @@ namespace uldis_ladite
         private void metroButton4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void mtb_veltteksts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        
+        private void metroTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtboxsearch.Text;
+            string connectionString = ConfigurationManager.ConnectionStrings["connstring"].ConnectionString; 
+
+            using (SqlConnection con = new SqlConnection(connectionString))
+            {
+                con.Open();
+                string query = "SELECT * FROM Ulda_ladite WHERE Vārds LIKE @keyword OR Uzvārds LIKE @keyword";
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@keyword", "%" + keyword + "%");
+                    SqlDataAdapter sda = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
         }
     }
     

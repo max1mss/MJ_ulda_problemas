@@ -1,7 +1,10 @@
-Vārds - 
-Uzvārds - 
-Platums - 
-Garums - 
-Augstums - 
-Veltījuma teksts - 
-Materiāla cena eur/m2 - 
+Vārds - Uldis
+Uzvārds - ladinsh
+Platums - 99
+Garums - 92
+Augstums - 78
+Veltījuma teksts - esmu labs meistars
+Materiāla cena eur/m2 - 21
+Produkta cena - 0
+PVN summa - 0
+Rēķina summa - 0
